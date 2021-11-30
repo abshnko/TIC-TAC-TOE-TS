@@ -28,12 +28,12 @@ body {
 
 .App .wrapper .board-wrapper .board .hover svg {
   opacity: 0%;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
 }
 
 .App .wrapper .board-wrapper .board .hover:hover svg {
-  opacity: 30%;
+  opacity: 30;
 }
 
 .App .wrapper .board-wrapper .results .button {
