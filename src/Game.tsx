@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import ChooseGame from "./ChooseGame";
 import PlayWithComputer from "./PlayWithComputer";
-import PlayWithFriend from "./PlayWithFriend";
+import PlayWithFriend from "./PlayWithFriend/PlayWithFriend";
 
 const Game = () => {
   const [isChosenGame, setIsChosenGame] = useState(false);
   const [playWithFriend, setPlayWithFriend] = useState(false);
   return (
-    <div className="flex h-screen">
-      <div className="flex flex-col justify-between h-1/2 w-1/2 m-auto border-2 pb-6">
+    <div className="wrapper flex h-screen">
+      <div className="board-wrapper items-center flex flex-col h-2/3 w-2/3 mx-auto my-10 pb-6">
         {!isChosenGame && (
           <ChooseGame
             setIsChosenGame={setIsChosenGame}
             setPlayWithFriend={setPlayWithFriend}
           />
         )}
-        {isChosenGame && playWithFriend && <PlayWithFriend />}
+        {isChosenGame && playWithFriend && (
+          <PlayWithFriend
+            setIsChosenGame={setIsChosenGame}
+            setPlayWithFriend={setPlayWithFriend}
+          />
+        )}
         {isChosenGame && !playWithFriend && <PlayWithComputer />}
       </div>
     </div>

@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Mono", monospace;
+}
+
+.App {
+  font-family: "PT Mono", monospace;
+  .wrapper {
+    .board-wrapper {
+      .choose {
+        .buttons {
+          .button {
+            background-color: #0f62fe;
+            transition: 0.5s ease-in-out;
+          }
+          .button:hover {
+            background-color: #007d79;
+          }
+        }
+      }
+      .board {
+        .hide {
+          svg {
+            opacity: 0%;
+          }
+        }
+        .hover {
+          svg {
+            opacity: 0%;
+            transition: 0.3s linear;
+          }
+        }
+        .hover:hover {
+          svg {
+            opacity: 30%;
+          }
+        }
+      }
+      .results {
+        .button {
+          background-color: #0f62fe;
+        }
+      }
+    }
+  }
+}
